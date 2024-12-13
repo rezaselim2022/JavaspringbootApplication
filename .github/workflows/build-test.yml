@@ -41,6 +41,12 @@ jobs:
         run: mvn clean install
       - name: Run tests
         run: mvn test
+
+      - name: Create Jar file 
+        uses: actions/upload-artifact@v3
+        with:
+          name: application-jar
+          path: target/*.jar
        
      
       
