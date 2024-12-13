@@ -33,7 +33,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
       - name: Set up JDK 8 # set up java 8
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: '8'
           distribution: 'temurin'
@@ -43,7 +43,7 @@ jobs:
         run: mvn test
 
       - name: Create Jar file 
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: application-jar
           path: target/*.jar
